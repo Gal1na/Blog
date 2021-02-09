@@ -42,22 +42,22 @@ a {
   outline: none;
   box-shadow: none;
 
-  &:not([disabled]) {
-    &:hover {
-      background-color: lighten($font-color-primary, 60);
-      border-color: lighten($font-color-primary, 60);
-      color: $font-color-secondary;
-    }
-  }
-
   &:focus {
     color: $font-color-secondary;
-    background-color: lighten($font-color-primary, 60);
+    background-color: lighten($color-dark-gray, 60);
   }
 
+  &:hover {
+    @media (min-width: $screen-md-min) {
+      background-color: lighten($color-dark-gray, 60);
+      border-color: lighten($color-dark-gray, 60);
+      color: $font-color-secondary;
+    }
+  }  
+
   &:active {
-    background-color: lighten($font-color-primary, 40);
-    border-color: lighten($font-color-primary, 40);
+    background-color: lighten($color-dark-gray, 40);
+    border-color: lighten($color-dark-gray, 40);
     color: $font-color-secondary;
   }
 

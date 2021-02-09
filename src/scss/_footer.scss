@@ -16,7 +16,6 @@
 
 .social-list {
   display: flex;
-  //flex-direction: row;
   justify-content: space-between;
   list-style: none;
   max-width: 630px;
@@ -28,16 +27,11 @@
     align-items: center;
   }
 
-  &__item {
-    outline: none;
-  }
-
   &__link {
     display: block; 
     padding: 8px 12px;
     color: $font-color-primary;
     font-size: $font-size-h4;
-    outline: none;
 
     &:hover{
       @media (min-width: $screen-md-min) {

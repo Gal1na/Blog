@@ -65,7 +65,6 @@
     padding: 0.75em 1.25em;
     background: $bg-color-secondary;
     cursor: pointer;
-    outline: none;
 
     &:hover {
       @media (min-width: $screen-md-min) {
@@ -87,7 +86,6 @@
   display: block;
   position: relative;
   border-radius: 10px;
-  outline: none;
   color: $font-color-primary;
   transform: scale(1);
   transition: 0.3s transform ease;
