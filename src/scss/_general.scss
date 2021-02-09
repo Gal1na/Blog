@@ -37,16 +37,24 @@
   padding-top: 45px;
   padding-bottom: 45px;
 
-  @media (max-width: $screen-sm-max) {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-
   &:first-child {
-    padding-top: 50px;
+    padding-top: 90px;
   }
 
   &:last-child {
-    padding-bottom: 50px;
+    padding-bottom: 90px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &:first-child {
+      padding-top: 50px;
+    }
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
   }
 }
