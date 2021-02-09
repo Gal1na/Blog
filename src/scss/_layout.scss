@@ -49,7 +49,7 @@ $map-breakpoints: (
 
 @each $size, $breakpoint in $map-breakpoints {
   @media (min-width: $breakpoint) {
-    @for $i from 11 through 2 {
+    @for $i from 12 through 2 {
       .col-#{$size}-#{$i} {      
         width: (100% / 12) * $i;
       }

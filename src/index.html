@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/css/main.min.css" />
 </head>
 <body>  
-    <nav class="nav js-nav">
+  <nav class="nav js-nav">
     <div class="container">
       <div class="navbar">
         <div class="nav__header">
@@ -246,10 +246,38 @@
               </a>
             </div>
           </div> <!-- /.row -->
-        </div>
+        </div> <!-- /.portfolio -->
         <button class="btn btn--primary">Показать ещё</button>
       </div>
-    </section> <!-- /.section-portfolio -->      
+    </section> <!-- /.section-portfolio -->
+
+    <section class="section-feedback section" id="feedback">
+      <div class="container">
+        <h2 class="section-title title title--center">Написать мне</h2>
+        <div class="row">
+          <div class="col-md-12 col-lg-10 col-lg-offset-1">
+            <form class="form-contact">
+              <div class="form-contact__group form-contact__group--half-width">
+                <label class="form-contact__caption" for="fullname">Ваше имя</label>
+                <input id="fullname" class="form-contact__field" name="fullname" type="text" minlength="10" value="" required>
+              </div>
+
+              <div class="form-contact__group form-contact__group--half-width">
+                <label class="form-contact__caption" for="email">Email</label>
+                <input id="email" class="form-contact__field" name="email" type="text" minlength="10" value="" required>
+              </div>
+
+              <div class="form-contact__group">
+                <label class="form-contact__caption" for="message">Сообщение</label>
+                <textarea id="message" class="form-contact__field form-contact__field--message" name="message" maxlength="200" minlength="8" placeholder="Напишите здесь ваше сообщение."></textarea>
+              </div>
+
+              <button class="btn btn--primary">Отправить</button>
+            </form>
+          </div>
+        </div> <!-- /.row -->
+      </div>
+    </section> <!-- /..section-feedback -->
   </main>
   
   <script src="/js/main.js"></script>
