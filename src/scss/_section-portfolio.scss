@@ -1,0 +1,116 @@
+.section-portfolio {
+}
+
+.portfolio {
+  margin-bottom: 80px;
+
+  @media(max-width: $screen-sm-max) {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio-preview {
+  display: block;
+  height: 100%;
+  margin-bottom: 20px;
+  padding-top: 135px;
+  padding-bottom: 135px;
+  background-image: url('/img/portfolio_1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  outline: none;  
+
+  @media (max-width: $screen-lg-max) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px black;
+  }
+
+  &:hover {
+    @media (min-width: $screen-md-min) {
+      box-shadow: 0 0 5px black;
+    }
+  }
+
+  &--second {
+    background-image: url('/img/portfolio_2.jpg');
+  }
+
+  &--third {
+    background-image: url('/img/portfolio_3.jpg');
+  }
+
+ /* &__img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+  }*/
+
+  &__info {
+   /* position: absolute;
+    top: 135px;*/
+    color: $font-color-primary;
+    text-align: center;
+    padding-right: 18px;
+    padding-left: 18px;
+
+/*    @media (max-width: $screen-lg-max) {
+      top: 50px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      top: 30px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: 120px;
+      width: 70%;
+      left: 15%;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 80%;
+      left: 10%;
+    } */
+
+   &--color-white {
+      color: $font-color-secondary;
+    }    
+  }
+
+  &__header {
+    font-family: $font-family-secondary;
+    font-size: $font-size-h3;
+    margin-bottom: 44px;
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-size: $font-size-h4;
+    margin-bottom: 17px;
+    line-height: 1.5;
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+/** {
+  outline: 1px solid red;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:after, :before {
+  box-sizing: border-box;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sr-only {
+  position: absolute;
+  margin: -1px 0 0 -1px;
+  padding: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  outline: 0;
+}
+
+.section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &:first-child {
+    padding-top: 50px;
+  }
+
+  &:last-child {
+    padding-bottom: 50px;
+  }
+}

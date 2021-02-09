@@ -1,0 +1,90 @@
+.section-about {
+  
+  &__photo {
+    border-radius: 10px;
+
+    @media(max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+    @media (min-width: $screen-xlg-min) {
+      padding-top: 42px;
+    }
+    
+  }
+  
+  &__text {
+    padding-left: 20px;    
+    margin-bottom: 30px;
+    line-height: 1.5;
+
+    @media (min-width: $screen-xlg-min) {
+      margin-bottom: 45px;
+      padding-right: 73px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+
+    & p {
+      @media (max-width: $screen-sm-max) {
+        font-size: $font-size-sm;
+        line-height: $line-height-md;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+
+        @media (min-width: $screen-xlg-min) {
+          margin-bottom: 25px;
+        }
+      }
+    }    
+  }
+}
+
+.callout {
+  padding: 15px 20px;
+  border-left: 3px solid $bg-color-secondary;
+
+  @media (min-width: $screen-xlg-min) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    position: absolute;
+    top: 92%;
+    left: -77%;
+    padding-right: 0; 
+  }
+
+  @media(max-width: $screen-sm-max) {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  &__text {
+    font-style: italic;
+    font-size: 19px;
+    line-height: $line-height-md;
+
+    @media (min-width: $screen-xlg-min) {
+      font-size: $font-size-lg;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      font-size: $font-size-md;
+    }
+  }
+}

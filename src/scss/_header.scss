@@ -1,0 +1,15 @@
+.header { 
+  height: 63vh;
+  background-color: $bg-color-header;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $screen-md-max) {
+    height: 42vh;
+    background-position-x: center;
+  }
+
+  &--bg-home {
+    background-image: url('../img/fon-header_home.jpg');
+  }
+}

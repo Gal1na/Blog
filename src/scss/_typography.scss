@@ -1,0 +1,58 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize*0.7;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: calc(#{$mobSize} + #{$addMobSize} * ((100vw - 320px) / 1200))
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: calc(#{$mobSize} + #{$addSize} * (100vw / 1200))
+  }
+}
+
+html,
+body {
+  height: auto;
+  background-color: $bg-color-primary;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $font-color-primary;  
+}
+
+.title {
+  font-family: $font-family-secondary;
+  font-weight: 700;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.section-title {
+  margin-bottom: 60px;
+  //font-size: $font-size-h1;
+  padding-top: 6px;
+  font-size: calc(25px + (11 + 11*0.7)*((100vw - 320px) / 1200));
+  //@include adaptiv-font($font-size-h1, 25);
+
+  @media (min-width: $screen-md-min) {
+    font-size: calc(25px + 11 * (100vw / 1200));
+  }  
+
+  line-height: $line-height-sm;  
+
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 20px;
+  }
+}
+
+.figcaption {
+  font-size: $font-size-sm;
+}

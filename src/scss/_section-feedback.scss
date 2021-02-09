@@ -1,0 +1,62 @@
+.section-feedback {
+  padding-bottom: 81px;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: url('../img/fon_form.jpg') no-repeat;
+  min-height: 637px;
+  padding-top: 53px;
+  padding-left: 71px;
+  padding-right: 71px;
+  padding-bottom: 62px;
+
+
+  &__group {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    &--half-width {
+      width: 50%;
+    }
+
+    &:hover .form-contact__field{
+      box-shadow: 0 0 10px 2px $input-color-primary;
+    }
+  }
+
+  &__caption {
+    display: block;
+    font-family: $font-family-secondary;
+    font-size: $font-size-h4;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 20px;
+    opacity: 0.4;
+    border: 1px solid $input-color-primary;
+    outline: none;
+    color: $font-color-input;
+
+    &:focus {
+      outline: 1px solid $input-color-primary;
+    }
+
+    &:active {
+      outline: 4px solid $input-color-primary;
+    }
+
+    &--message {
+      height: 293px;
+      resize: none;
+    }
+  }
+}

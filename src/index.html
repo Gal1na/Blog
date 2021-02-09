@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="icon" href="/img/blog.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Spectral+SC:wght@700&display=swap" rel="stylesheet">
+
+  <title>Blog</title>
+  
+  <link rel="stylesheet" href="/css/main.min.css" />
+</head>
+<body>  
+    <nav class="nav js-nav">
+    <div class="container">
+      <div class="navbar">
+        <div class="nav__header">
+          <a class="logo nav__logo" href="#">
+            <img class="logo__img img-responsive" src="/img/logo.png" alt="logo">
+          </a>
+
+          <button class="btn-toggle-menu js-btn-toggle-menu">
+            <span class="btn-toggle-menu__item js-btn-toggle-menu-item">Toggle menu</span>
+          </button>
+        </div> <!-- / .nav__header -->
+
+        <ul class="menu nav__menu js-menu">
+          <li class="menu__item">
+            <a class="menu__link js-menu-link" href="#articles">Статьи</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link js-menu-link" href="#about">Обо мне</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link js-menu-link" href="#portfolio">Портфолио</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link js-menu-link" href="#feedback">Написать мне</a>
+          </li>
+        </ul>
+      </div>  <!-- / .navbar -->
+    </div>
+  </nav>
+  
+  <header class="header header--bg-home">
+    <div class="container">
+      <h1 class="sr-only">Header</h1>
+    </div>
+  </header>
+
+  <main >
+    <section class="section-articles section" id="articles">
+      <div class="container">
+        <div class="section-articles__header">
+          <h2 class="title section-title">Все статьи</h2>
+          <div class="custom-select">
+            <select class="custom-select__list">
+              <option class="custom-select__item" hidden>Выбрать тему</option>
+              <option class="custom-select__item" value="all">Все статьи</option>
+              <option class="custom-select__item" value="travels">Путешествия</option>
+              <option class="custom-select__item" value="city">Город</option>
+              <option class="custom-select__item" value="books">Книги</option>
+              <option class="custom-select__item" value="photos">Фотографии</option>
+              <option class="custom-select__item" value="recipes">Рецепты</option>
+            </select>
+          </div> <!-- /.custom-select -->
+        </div> <!-- /.section-articles__header -->
+
+        <div class="articles-list">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="article-preview" href="article.html" data-category="travels">
+                <img class="article-preview__img img-responsive" src="img/article_1.jpg" alt="Travel">
+                <div class="article-preview__info">
+                  <h5 class="title article-preview__title">Путешествие в Берлин в августе
+                  </h5>
+                  <p class="article-preview__description">
+                    Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!
+                  </p>
+                  <div class="article-preview__inner">
+                    <p class="article-preview__tags">Теги: путешествия</p>
+                    <time class="article-preview__date" datetime="2020-09-29">29.09.2020</time>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="article-preview" href="article.html" data-category="city">
+                <img class="article-preview__img img-responsive" src="img/article_2.jpg" alt="Coldbrew">
+                <div class="article-preview__info">
+                  <h5 class="title article-preview__title">Где выпить колдбрю в Москве
+                  </h5>
+                  <p class="article-preview__description">
+                    Собрала для вас список любимых кофеен, где подают лучший летний напиток.
+                  </p>
+                  <div class="article-preview__inner">
+                    <p class="article-preview__tags">Теги: город</p>
+                    <time class="article-preview__date" datetime="2020-07-24">24.07.2020</time>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="article-preview" href="article.html" data-category="books">
+                <img class="article-preview__img img-responsive" src="img/article_3.jpg" alt="Books">
+                <div class="article-preview__info" alt="">
+                  <h5 class="title article-preview__title">Прочитано: книжные рекомендации
+                  </h5>
+                  <p class="article-preview__description">
+                    Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.
+                  </p>
+                  <div class="article-preview__inner">
+                    <p class="article-preview__tags">Теги: книги</p>
+                    <time class="article-preview__date" datetime="2021-01-29">29.09.2020</time>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div> <!-- /.row -->
+
+          <div class="row">
+            <div class="col-md-6">
+              <a class="article-preview" href="article.html" data-category="photos">
+                <img class="article-preview__img img-responsive" src="img/article_4.jpg" alt="Photos">
+                <div class="article-preview__info article-preview__info--imposition">
+                  <h5 class="title article-preview__title article-preview__title--lg">Снимки на плёнку
+                  </h5>
+                  <p class="article-preview__description article-preview__description--lg">
+                    Поделилась с вами весенними фотографиями, и секретами удачных снимков.
+                  </p>
+                  <div class="article-preview__inner article-preview__inner--light">
+                    <p class="article-preview__tags">Теги: фотографии</p>
+                    <time class="article-preview__date" datetime="2020-06-29">29.06.2020</time>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a class="article-preview" href="article.html" data-category="recipes">
+                <img class="article-preview__img img-responsive" src="img/article_5.jpg" alt="Cheesecake">
+                <div class="article-preview__info article-preview__info--imposition">
+                  <h5 class="title article-preview__title article-preview__title--lg">Домашний чизкейк 
+                  </h5>
+                  <p class="article-preview__description article-preview__description--lg">
+                    Что может быть лучше чизкейка с сезонными ягодами? Только домашний чизкейк!
+                  </p>
+                  <div class="article-preview__inner article-preview__inner--light">
+                    <p class="article-preview__tags">Теги: рецепты</p>
+                    <time class="article-preview__date" datetime="2020-06-24">24.06.2020</time>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div> <!-- /.row -->
+         </div> <!--      /.articles-list -->
+        <button class="btn btn--primary">Показать ещё</button>
+      </div>      
+    </section> <!-- /.section-articles -->
+      
+    <section class="section-about section" id="about">
+      <div class="container">
+        <h2 class="section-title title title--center">Обо мне</h2>
+        <div class="row">
+          <div class="col-md-5 col-lg-5 col-xlg-6">
+            <img class="section-about__photo img-responsive" src="img/about_me.jpg" alt="My photo">
+          </div>
+
+          <div class="col-md-7 col-lg-7 col-xlg-6">
+            <div class="section-about__info">
+              <div class="section-about__text">
+                <p>Всем привет! Меня зовут Аня, и это мой личный блог. <br> Здесь ты найдёшь рассказы о моих путешествиях, снимки на плёнку, рецепты, обзоры на книги. В общем, тексты о том, что мне инетресно.
+                </p>
+                <p>Я работаю копирайтером, поэтому мой блоге — это ещё и моё портфолио. Ниже размещены несколько моих лучших рабочих текстов. Буду рада новым сотрудничествам!
+                </p>
+                <p>Если вы хотите написать мне — это можно сделать в соцсетях или через форму. Всегда приятно услышать обратную связь от читателей и познакомиться поближе.
+                </p>
+                <p>Приятного чтения!
+                </p>
+              </div>
+              <div class="callout">
+                <p class="callout__text">Я верю, что каждый раз пробуя новое, выходящее за зону моего комфорта, я действительно узнаю настояющую себя.
+                </p>
+              </div>  
+            </div>
+          </div>
+        </div> <!-- /.row -->
+      </div>      
+    </section> <!-- /.section-about -->
+      
+    <section class="section-portfolio section" id="portfolio">
+      <div class="container">
+        <h2 class="section-title title title--center">Портфолио</h2>
+        <div class="portfolio">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="portfolio-preview" href="#">           
+                <div class="portfolio-preview__info">
+                  <h4 class="portfolio-preview__header">
+                    Блог HTML Academy
+                  </h4>
+                  <h5 class="portfolio-preview__title">
+                    «Как учиться продуктивно»
+                  </h5>
+                  <p class="portfolio-preview__description">
+                    Про основные методы обучения, которые помогут быстро и надолго запомнить информацию.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a class="portfolio-preview portfolio-preview--second" href="#">           
+                <div class="portfolio-preview__info portfolio-preview__info--color-white">
+                  <h4 class="portfolio-preview__header">
+                    Журнал «LNK»
+                  </h4>
+                  <h5 class="portfolio-preview__title">
+                    «Зачем поцелуи нужны человеку? И какие они бывают»
+                  </h5>
+                  <p class="portfolio-preview__description">
+                    Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются? Какие смысли вкладывают в этот ритуал? И где корни этой практики?
+                  </p>
+                </div>
+              </a>
+            </div> 
+
+            <div class="col-md-4">
+              <a class="portfolio-preview portfolio-preview--third" href="#">           
+                <div class="portfolio-preview__info">
+                  <h4 class="portfolio-preview__header">
+                    Журнал «Т — Л»
+                  </h4>
+                  <h5 class="portfolio-preview__title">
+                    «Советы по эффективной удалённой работе»
+                  </h5>
+                  <p class="portfolio-preview__description">
+                    Поделилась лайфхаками, которые помогают мне работать продуктивно из дома. 
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div> <!-- /.row -->
+        </div>
+        <button class="btn btn--primary">Показать ещё</button>
+      </div>
+    </section> <!-- /.section-portfolio -->      
+  </main>
+  
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

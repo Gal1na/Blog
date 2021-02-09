@@ -1,0 +1,70 @@
+$WHITE: #fff;
+$BLACK: #000;
+$ALMOST_BLACK: #202117;
+$DARK_GRAY: #2E2F22;
+$GRAY: #D7D1C9;
+$LIGHT_GRAY: #ECE1E1;
+
+$color-white: $WHITE;
+$color-black: $BLACK;
+$color-almost-black: $ALMOST_BLACK;
+$color-dark-gray: $DARK_GRAY;
+$color-gray: $GRAY;
+$color-light-gray: $LIGHT_GRAY;
+
+// Background color
+$bg-color-primary: $WHITE;
+$bg-color-secondary: $GRAY;
+$bg-color-header: #efeae4;
+$bg-color-comment: $LIGHT_GRAY;
+
+ // Fonts
+$font-family-base: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+$font-family-secondary: 'Spectral SC', 'Times New Roman', serif;
+$line-height: 1.625;
+$line-height-md: 1.2;
+$line-height-sm: 1;
+
+$font-size-base: 16px;
+$font-size-h1: 36px;
+$font-size-h2: 24px;
+$font-size-h3: 20px;
+$font-size-h4: 18px;
+$font-size-xlg: 36px;
+$font-size-lg: 30px;
+$font-size-md: 18px;
+$font-size-sm: 14px;
+
+// Font color
+$font-color-primary: $DARK_GRAY;
+$font-color-secondary: $WHITE;
+
+// Input color
+$input-color-primary: $BLACK;
+$input-color-secondary: $DARK_GRAY;
+$font-color-input: $ALMOST_BLACK;
+
+
+$color-btn: $ALMOST_BLACK;
+$btn-toggle-menu-color: red;
+
+//Breakpoints
+$screen-xs:                  320px;
+$screen-xs-min:              $screen-xs;
+
+$screen-sm:                  576px;
+$screen-sm-min:              $screen-sm;
+
+$screen-md:                  768px;
+$screen-md-min:              $screen-md;
+
+$screen-lg:                  992px;
+$screen-lg-min:              $screen-lg;
+
+$screen-xlg:                 1200px;
+$screen-xlg-min:             $screen-xlg;
+
+$screen-xs-max:              ($screen-sm-min - 1); // до 575
+$screen-sm-max:              ($screen-md-min - 1); // до 767
+$screen-md-max:              ($screen-lg-min - 1); // до 991
+$screen-lg-max:              ($screen-xlg-min - 1); // до 1199
