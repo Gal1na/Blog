@@ -6,11 +6,9 @@
   let menu = $('.js-menu');
   let menuLink = $('.js-menu-link');
   let menuBtn = $('.js-btn-toggle-menu');
-  let navTop;
 
   $(document).ready(function() {
 
-    getNavTopSize();
     smoothScroll();
     setMenuStiky();
     hideMobileMenu();
@@ -31,7 +29,6 @@
   });
 
   $(window).on('resize', function(){
-    getNavTopSize();
 
     if ( $(window).width() > 767 ) {
       menu.removeClass('menu--show');
@@ -40,13 +37,9 @@
 
   // ------ Functions ------
 
-  function getNavTopSize() {
-      navTop = ($(window).width() < 768) ? 15 : 30;
-  }
-
   // Make the main menu sticky
   function setMenuStiky() {
-    ($(this).scrollTop() > navTop)
+    ($(this).scrollTop() > 0)
       ? nav.addClass('nav--stiky')
       : nav.removeClass('nav--stiky');
   }
@@ -113,6 +106,5 @@
         }
       })
     })
-  }
-  
+  }  
 })();

@@ -9,7 +9,8 @@
   transition: background-color 0.3s ease;
 
   &--stiky {     
-    background-color: $bg-color-header;     
+    background-color: $bg-color-header;
+    opacity: 0.9;     
   }
 
   &__header {
