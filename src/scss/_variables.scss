@@ -4,6 +4,7 @@ $ALMOST_BLACK: #202117;
 $DARK_GRAY: #2E2F22;
 $GRAY: #D7D1C9;
 $LIGHT_GRAY: #ECE1E1;
+$LIGHT_BROWN: #ae6b60;
 
 $color-white: $WHITE;
 $color-black: $BLACK;
@@ -11,6 +12,7 @@ $color-almost-black: $ALMOST_BLACK;
 $color-dark-gray: $DARK_GRAY;
 $color-gray: $GRAY;
 $color-light-gray: $LIGHT_GRAY;
+$color-light-brown: $LIGHT_BROWN;
 
 // Background color
 $bg-color-primary: $WHITE;
@@ -43,10 +45,10 @@ $font-color-secondary: $WHITE;
 $input-color-primary: $BLACK;
 $input-color-secondary: $DARK_GRAY;
 $font-color-input: $ALMOST_BLACK;
-
+$font-color-menu-effects: $color-light-brown;
 
 $color-btn: $ALMOST_BLACK;
-$btn-toggle-menu-color: red;
+$btn-toggle-menu-color: $color-light-brown;
 
 //Breakpoints
 $screen-xs:                  320px;

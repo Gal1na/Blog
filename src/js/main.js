@@ -14,6 +14,7 @@
     smoothScroll();
     setMenuStiky();
     hideMobileMenu();
+    searchArticle();
     
     menuBtn.on('click', function() {
       menu.toggleClass('menu--show');
@@ -22,19 +23,6 @@
     menuLink.on('click', function() {
       menu.removeClass('menu--show');
     }); 
-
-    let articles = document.querySelectorAll('.article-preview');
-    let filter = document.querySelector('.custom-select__list');
-
-    filter.onchange = function() {
-      for (let article of articles) {
-        if ((article.dataset.category !== filter.value) && (filter.value !== 'all')) {
-          article.parentNode.classList.add('hidden');
-        } else {
-          article.parentNode.classList.remove('hidden');
-        }
-      }
-    }
   });
 
   $(window).on('scroll', function() {
@@ -104,6 +92,27 @@
         scrollTop: destination
       }, 600);
     });
+  }
+
+  // Search article
+  function searchArticle () {
+    let articles = $('.article-preview');
+    let filter = $('.custom-select__list');
+
+    filter.on('change', function() {
+      let value = filter.val();  
+
+      articles.each(function() {
+        let article = $(this);    
+        let data = article.attr('data-category');
+
+        if ((data !== value) && (value !== 'all')) {
+          article.closest('.js-col').addClass('hidden');
+        } else {
+          article.closest('.js-col').removeClass('hidden');
+        }
+      })
+    })
   }
   
 })();
