@@ -1,0 +1,339 @@
+%hover-focus-active {
+  &:focus {
+      background-color: lighten($font-color-primary, 75);
+      border: 1px dotted $font-color-primary;
+    }
+
+  &:hover {
+    @media (min-width: $screen-md-min) {
+      border: 1px dotted $font-color-primary;      
+    }
+  }
+  
+  &:active {
+    background-color: lighten($font-color-primary, 60);
+    border: 1px dotted $font-color-primary;
+  }
+}
+
+.article {
+  //margin-bottom: 65px;
+
+  &__header {
+    margin-bottom: 50px;
+
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+      font-size: $font-size-sm;     
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 25px;
+
+      @media (max-width: $screen-md-max) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.tags-date {  
+  color: rgba($font-color-primary, 0.7);
+
+  &__tags {
+    display: inline-block;
+    margin-right: 18px;
+  }
+}
+
+.figure {
+  margin-bottom: 40px;
+
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 15px;
+  }
+}
+
+.block-share {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    @media (max-width: $screen-sm-max) {
+      width: 40px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 25px;
+    }
+  }
+}
+
+.block-like {
+  position: relative;
+  font-size: 0;
+
+  &__like {
+    display: block;
+    margin-right: 4px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    @extend %hover-focus-active;
+  }
+
+  &__amount {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+    line-height: 1;
+    font-size: $font-size-base;
+  }
+}
+
+.share-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    outline: none;
+  }
+
+  &__link {
+    display: block;
+    margin-left: 12px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    @extend %hover-focus-active;
+  }
+
+  &__icon {
+    @media (max-width: $screen-sm-max) {
+      width: 40px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 25px;
+    }
+  }
+}
+
+.block-advice {
+ 
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    //font-size: $font-size-lg;
+    color: $font-color-primary;
+    font-weight: 700;
+    border: 1px solid transparent;
+
+    font-size: calc(18px + (12 + 12*0.7)*((100vw - 320px) / 1200));
+
+    @media (min-width: $screen-md-min) {
+      font-size: calc(18px + 12 * (100vw / 1200));
+    }  
+
+    @extend %hover-focus-active;
+  }
+
+  &__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  position: relative;
+  width: 62px;
+  height: 2px;
+  background-color: $font-color-primary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $font-color-primary;
+    border-right: 2px solid $font-color-primary;
+    transform: rotate(45deg);
+  }
+}
+
+.section-comments {
+  
+}
+
+.comments-list {
+  margin-bottom: 77px;
+  padding-top: 45px;
+  padding-right: 90px;
+  padding-bottom: 45px;
+  padding-left: 100px;
+  background-color: $bg-color-comment;
+
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 55px;
+    padding: 25px 60px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 45px;
+    padding: 20px 40px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 30px;
+    padding: 15px 15px;
+  }
+
+  &__item {
+    list-style: none;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: $font-size-sm;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 55px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 35px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__user {
+    margin-bottom: 14px; 
+  }
+
+  &__foto {
+    display: inline-block;
+    margin-right: 14px;
+    vertical-align: middle;
+    border-radius: 10px;   
+
+    @media (max-width: $screen-xs-max) {
+      width: 40px;
+    } 
+  }
+
+  &__name {
+    vertical-align: middle;
+    font-weight: 700;
+  }
+}
+
+.feedback {
+ // padding-left: 80px;
+
+  &__title {
+    margin-bottom: 70px;
+    font-size: $font-size-h2;
+    font-weight: 700;
+
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 50px;
+    } 
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+      font-size: $font-size-md;
+    }    
+  }
+
+  &__form {
+    @media (min-width: $screen-sm-min) {
+      max-height: 210px;
+    }
+  }
+}
+
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  
+  &__field {
+    width: 35%;
+    margin-bottom: 35px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $input-color-secondary;    
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      @media (min-width: $screen-md-min) {
+        border-bottom: 1px solid $input-color-primary;
+        box-shadow: 0 0 3px $input-color-secondary;
+      }
+    }
+
+    &:focus {
+      border-bottom: 1px solid $input-color-primary;
+      box-shadow: 0 0 3px $input-color-secondary;
+    }
+
+    &--message {
+      margin-bottom: 0;
+      width: 55%;
+      height: 210px;
+      border: 1px solid $input-color-secondary;
+      border-radius: 10px;
+      padding: 10px 20px;
+      resize: none;
+      font-family: $font-family-base;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+        margin-bottom: 20px;
+        order: 3;
+      }
+    }
+  }
+
+  &__btn {
+    
+    @media (max-width: $screen-xs-max) {
+      min-width: auto;
+      order: 4;
+    }
+  }
+}
