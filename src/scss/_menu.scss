@@ -1,17 +1,9 @@
 .nav {
-  position: fixed;
-  top: 0;
   padding-bottom: 5px;
   padding-top: 5px;
   width: 100%;
   border: none;
-  z-index: 9999;
   transition: background-color 0.3s ease;
-
-  &--stiky {     
-    background-color: $bg-color-header;
-    opacity: 0.9;     
-  }
 
   &__header {
     display: flex;

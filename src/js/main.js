@@ -8,9 +8,6 @@
   let menuBtn = $('.js-btn-toggle-menu');
 
   $(document).ready(function() {
-
-    smoothScroll();
-    setMenuStiky();
     hideMobileMenu();
     searchArticle();
     
@@ -18,14 +15,13 @@
       menu.toggleClass('menu--show');
     });
 
-    menuLink.on('click', function() {
-      menu.removeClass('menu--show');
-    }); 
-  });
-
-  $(window).on('scroll', function() {
-    showActiveMenuItem();
-    setMenuStiky()
+    menuLink.on('click', function(event) {
+      event.preventDefault();
+      if (menuBtn.is(':visible')) {
+        menu.removeClass('menu--show');
+      }
+      smoothScroll($(this));
+    });
   });
 
   $(window).on('resize', function(){
@@ -36,32 +32,6 @@
   });
 
   // ------ Functions ------
-
-  // Make the main menu sticky
-  function setMenuStiky() {
-    ($(this).scrollTop() > 0)
-      ? nav.addClass('nav--stiky')
-      : nav.removeClass('nav--stiky');
-  }
-
-  // Show active menu item when scrolling
-  function showActiveMenuItem() {
-    let scrollTop = $(window).scrollTop();
-    
-    menuLink.each( function() {
-      let link = $(this).attr("href");
-      let target = $(link);
-      $(this).blur();
-
-      if ( ((target.offset().top <= scrollTop)
-        && (target.offset().top + target.outerHeight() > scrollTop))) {
-        menuLink.removeClass("menu__link--active");
-        $(this).addClass("menu__link--active");
-      } else {
-        $(this).removeClass("menu__link--active");
-      }
-    });
-  }
 
   // Hide menu in mobile version
   function hideMobileMenu() {
@@ -75,17 +45,20 @@
   }  
 
   // Smooth scrolling
-  function smoothScroll() {
-    menuLink.on('click', function (event) {
-      event.preventDefault();
-      elementClick = $(this).attr("href")
-      destination = $(elementClick).offset().top+1;
-      
-      $('html, body').animate({
-        scrollTop: destination
-      }, 600);
-    });
+  function smoothScroll(link) {
+    let targetId = link.attr('href');
+
+    if (targetId[0] !== '#') {
+      return window.location = targetId;
+    }
+
+    let destination = $(targetId).offset().top+1;
+
+    $('html, body').animate({
+      scrollTop: destination
+    }, 600);
   }
+  
 
   // Search article
   function searchArticle () {

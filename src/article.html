@@ -14,38 +14,37 @@
 
   <link rel="stylesheet" href="/css/main.min.css" />
 </head>
-<body>
-  <nav class="nav js-nav">
-    <div class="container">
-      <div class="navbar">
-        <div class="nav__header">
-          <a class="logo nav__logo" href="#">
-            <img class="logo__img img-responsive" src="/img/logo.png" alt="logo">
-          </a>
-
-          <button class="btn-toggle-menu js-btn-toggle-menu">
-            <span class="btn-toggle-menu__item js-btn-toggle-menu-item">Toggle menu</span>
-          </button>
-        </div> <!-- / .nav__header -->
-
-        <ul class="menu nav__menu js-menu">
-          <li class="menu__item">
-            <a class="menu__link js-menu-link" href="index.html#articles">Статьи</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link js-menu-link" href="index.html#about">Обо мне</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link js-menu-link" href="index.html#portfolio">Портфолио</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link js-menu-link" href="index.html#feedback">Написать мне</a>
-          </li>
-        </ul>
-      </div>  <!-- / .navbar -->
-    </div>
-  </nav>
+<body> 
   <header class="header header--bg-article">
+    <nav class="nav js-nav">
+      <div class="container">
+        <div class="navbar">
+          <div class="nav__header">
+            <a class="logo nav__logo" href="#">
+              <img class="logo__img img-responsive" src="/img/logo.png" alt="logo">
+            </a>
+            <button class="btn-toggle-menu js-btn-toggle-menu">
+              <span class="btn-toggle-menu__item js-btn-toggle-menu-item">Toggle menu</span>
+            </button>
+          </div> <!-- / .nav__header -->
+
+          <ul class="menu nav__menu js-menu">
+            <li class="menu__item">
+              <a class="menu__link js-menu-link" href="index.html#articles">Статьи</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link js-menu-link" href="index.html#about">Обо мне</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link js-menu-link" href="index.html#portfolio">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link js-menu-link" href="index.html#feedback">Написать мне</a>
+            </li>
+          </ul>
+        </div>  <!-- / .navbar -->
+      </div>
+    </nav>
     <div class="container">
       <h1 class="sr-only">Header</h1>
     </div>    
@@ -84,10 +83,10 @@
 
             <div class="block-share">
               <div class="block-like">
-                <a class="block-like__like">
+                <a class="block-like__like js-like">
                   <img class="block-share__icon img-responsive" src="img/page-article/like.png" alt="like">
                 </a>
-                <p class="block-like__amount">16</p>
+                <p class="block-like__amount js-like-amount">16</p>
               </div>
 
               <ul class="share-list">
@@ -125,7 +124,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-11 col-xlg-10">
-            <ul class="comments-list">
+            <ul class="comments-list js-comments-list">
                 <li class="comments-list__item">
                   <div class="comments-list__user">
                     <img class="comments-list__foto" src="img/page-article/us_1.png" alt='user photo'>
@@ -161,12 +160,12 @@
           <div class="col-md-10 col-lg-9 col-xlg-7 col-md-offset-1">
             <div class="feedback">
               <h3 class="feedback__title">Оставить комментарий</h3>
-              <form class="feedback__form form-comment" method="post">
+              <form class="feedback__form form-comment js-form-comment" method="post">
                   <input id="name" class="form-comment__field" name="name" type="text" minlength="10" value="" placeholder="Имя" required>
 
                   <input id="email" class="form-comment__field" name="email" type="text" minlength="10" value="" placeholder="Почта">
 
-                  <button class="btn btn--primary form-comment__btn">Отправить</button>
+                  <button class="btn btn--primary form-comment__btn js-form-comment-btn">Отправить</button>
 
                   <textarea class="form-comment__field form-comment__field--message" id="message"  name="message" maxlength="200" minlength="8" placeholder="Напишите здесь ваше сообщение."></textarea>
               </form>
@@ -195,6 +194,8 @@
       </ul>
     </div>
   </footer>
-  
+
+  <script src="/js/main.js"></script>
+
 </body>
 </html>

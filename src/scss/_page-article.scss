@@ -331,8 +331,11 @@
 
   &__btn {
     
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       min-width: auto;
+    }
+
+    @media (max-width: $screen-xs-max) {
       order: 4;
     }
   }
