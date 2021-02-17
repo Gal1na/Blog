@@ -16,7 +16,8 @@
 
     $('.js-select-article').on('click', searchArticle());
 
-    like.on('click', counterLikes);   
+    like.on('click', counterLikes);
+    submitButton.on('click', validationFieldMessage);   
     
     menuBtn.on('click', function() {
       menu.toggleClass('menu--show');
@@ -100,4 +101,13 @@
 
     like.toggleClass('block-like__like--added');
   };
+
+  //Message field validation
+  function validationFieldMessage() {
+    let value = commentField.val();
+    if ((value.length < 8) || (value.length > 200)) {
+      commentField.addClass('warning');
+      submitButton.prop('disabled', true);
+    }
+  }
 })();
