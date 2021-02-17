@@ -6,10 +6,17 @@
   let menu = $('.js-menu');
   let menuLink = $('.js-menu-link');
   let menuBtn = $('.js-btn-toggle-menu');
+  let like = $('.js-like');
+  let commentField = $('#message');
+  let submitButton = $('.js-form-comment-btn');
+  let formComment = $('.js-form-comment');
 
   $(document).ready(function() {
     hideMobileMenu();
-    searchArticle();
+
+    $('.js-select-article').on('click', searchArticle());
+
+    like.on('click', counterLikes);   
     
     menuBtn.on('click', function() {
       menu.toggleClass('menu--show');
@@ -79,5 +86,18 @@
         }
       })
     })
-  }  
+  } 
+
+  // Counter Likes
+  function counterLikes() {
+    let numberLikes = $('.js-like-amount');
+
+    if (like.hasClass('block-like__like--added')) {
+      numberLikes.text(parseInt(numberLikes.text()) - 1);
+    } else {
+      numberLikes.text(parseInt(numberLikes.text()) + 1);
+    }
+
+    like.toggleClass('block-like__like--added');
+  };
 })();

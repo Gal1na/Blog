@@ -98,6 +98,10 @@
     border-radius: 50%;
     border: 1px solid transparent;
 
+    &--added {
+      background-color: #d1c2c2;
+    }
+
     @extend %hover-focus-active;
   }
 
