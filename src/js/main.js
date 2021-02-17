@@ -17,7 +17,9 @@
     $('.js-select-article').on('click', searchArticle());
 
     like.on('click', counterLikes);
-    submitButton.on('click', validationFieldMessage);   
+    submitButton.on('click', validationFieldMessage);
+    commentField.on('input', removeWarningMessageField);
+    formComment.on('submit', addComment);
     
     menuBtn.on('click', function() {
       menu.toggleClass('menu--show');
@@ -107,7 +109,50 @@
     let value = commentField.val();
     if ((value.length < 8) || (value.length > 200)) {
       commentField.addClass('warning');
+      submitButton.unbind('mouseenter mouseleave');
       submitButton.prop('disabled', true);
+      
     }
+  }
+
+  // Remove warning from message field
+  function removeWarningMessageField() {
+    let value = commentField.val();
+    if ((value.length > 8)&&(value.length < 200)&&(commentField.hasClass('warning'))) {
+      commentField.removeClass('warning');
+      submitButton.prop('disabled', false);
+    }
+  }
+
+  // Add comment to comment list
+  function addComment(evt) {
+    evt.preventDefault();
+
+    let commentsList = $('.js-comments-list');
+    
+    let newComment = document.createElement('li');
+    newComment.classList.add('comments-list__item');
+
+    let userInfo = document.createElement('div');
+    userInfo.classList.add('comments-list__user');
+
+    let userPhoto = document.createElement('img');
+    userPhoto.classList.add('comments-list__foto');
+
+    let userName = document.createElement('span');
+    userName.classList.add('comments-list__name');
+    userName.textContent = document.querySelector('#name').value;
+    document.querySelector('#name').value='';
+
+    let newCommentText = document.createElement('p');
+    newCommentText.classList.add('comments-list__field');
+    newCommentText.textContent = document.querySelector('textarea').value;
+    document.querySelector('textarea').value='';
+
+    userInfo.append(userPhoto);
+    userInfo.append(userName);
+    newComment.append(userInfo);
+    newComment.append(newCommentText);
+    commentsList.append(newComment);
   }
 })();
