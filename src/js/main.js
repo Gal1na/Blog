@@ -12,8 +12,15 @@
   let formComment = $('.js-form-comment');
 
   $(document).ready(function() {
-    hideMobileMenu();
-
+    
+    // Hide menu in mobile version
+    $(document).on('click', function(e) {
+      let el = $('.js-btn-toggle-menu-item');    
+      if ( !menuBtn.is(e.target)  && !el.is(e.target)  && !menu.is(e.target) && menu.hasClass('menu--show') ) {
+        menu.removeClass('menu--show');
+      };    
+    }); 
+    
     $('.js-select-article').on('click', searchArticle());
 
     like.on('click', counterLikes);
@@ -43,17 +50,6 @@
 
   // ------ Functions ------
 
-  // Hide menu in mobile version
-  function hideMobileMenu() {
-    let el = $('.js-btn-toggle-menu-item');    
-
-    $(document).click(function (e) {
-      if ( !menuBtn.is(e.target)  && !el.is(e.target)  && !menu.is(e.target) && menu.hasClass('menu--show') ) {
-        menu.removeClass('menu--show');
-      };
-    });
-  }  
-
   // Smooth scrolling
   function smoothScroll(link) {
     let targetId = link.attr('href');
@@ -67,8 +63,7 @@
     $('html, body').animate({
       scrollTop: destination
     }, 600);
-  }
-  
+  }  
 
   // Search article
   function searchArticle () {
@@ -110,8 +105,7 @@
     if ((value.length < 8) || (value.length > 200)) {
       commentField.addClass('warning');
       submitButton.unbind('mouseenter mouseleave');
-      submitButton.prop('disabled', true);
-      
+      submitButton.prop('disabled', true);      
     }
   }
 
